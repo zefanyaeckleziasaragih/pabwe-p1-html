@@ -5,7 +5,6 @@
     <title>Detail — Cara Belajar Efektif</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <style>
-      /* Gaya serupa dengan CV (Times New Roman, layout rapi) */
       :root {
         --max-width: 900px;
         --muted: #666;
@@ -196,13 +195,17 @@
         padding: 10px;
         border-radius: 6px;
       }
-      .comment img {
+
+      /* gunakan kelas khusus untuk foto komentar agar konsisten */
+      .comment-photo {
         width: 50px;
         height: 50px;
         object-fit: cover;
         border-radius: 6px;
         border: 1px solid var(--border);
+        display: block;
       }
+
       .comment .who {
         font-weight: bold;
         margin-bottom: 6px;
@@ -223,7 +226,6 @@
         font-size: 13px;
       }
 
-      /* Responsif */
       @media (max-width: 640px) {
         .meta {
           flex-direction: row;
