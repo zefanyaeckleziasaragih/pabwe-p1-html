@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <title>Blog — Praktikum</title>
+    <style>
+      /* ====== Global style (mirip CV) ====== */
+      body {
+        font-family: "Times New Roman", Times, serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f6f8;
+        color: #111;
+      }
+      header,
+      main,
+      footer {
+        max-width: 950px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+
+      /* ====== Header & Nav ====== */
+      header h1 {
+        font-size: 28px;
+        margin: 0 0 12px 0;
+        text-align: center;
+      }
+      nav {
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      nav a {
+        margin: 0 8px;
+        color: #003399;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      hr {
+        margin: 18px 0;
+        border: none;
+        border-top: 1px solid #ccc;
+      }
+
+      /* ====== Article ====== */
+      article {
+        margin-bottom: 28px;
+        padding: 16px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        background: #fafafa;
+      }
+      h2 {
+        font-size: 22px;
+        margin: 12px 0 8px 0;
+      }
+      h3 {
+        font-size: 18px;
+        margin: 14px 0 8px 0;
+      }
+
+      /* ====== Images & Figure ====== */
+      figure {
+        margin: 0 0 10px 0;
+        text-align: center;
+      }
+      figure img {
+        border-radius: 6px;
+        border: 1px solid #ccc;
+      }
+      figcaption {
+        font-size: 13px;
+        color: #555;
+        margin-top: 4px;
+      }
+
+      /* ====== Comment section ====== */
+      .comment-section {
+        margin-top: 18px;
+        padding: 14px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: #fff;
+      }
+      .comment-section form {
+        margin-bottom: 16px;
+      }
+      .comment-section input[type="text"],
+      .comment-section input[type="file"],
+      .comment-section textarea {
+        width: 95%;
+        padding: 6px;
+        margin-top: 6px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-family: "Times New Roman", Times, serif;
+      }
+      .comment-section input[type="submit"],
+      .comment-section input[type="reset"] {
+        padding: 6px 12px;
+        margin-right: 8px;
+        border: none;
+        border-radius: 4px;
+        background: #003399;
+        color: white;
+        cursor: pointer;
+      }
+      .comment-section input[type="submit"]:hover,
+      .comment-section input[type="reset"]:hover {
+        background: #001f66;
+      }
+
+      .comment {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 12px;
+        padding: 8px;
+        border-bottom: 1px solid #e0e0e0;
+      }
+      .comment:last-child {
+        border-bottom: none;
+      }
+      .comment img {
+        margin-right: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+      }
+      .comment strong {
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      /* ====== Footer ====== */
+      footer {
+        margin-top: 30px;
+        font-size: 13px;
+        color: #666;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Blog Praktikum</h1>
+      <nav>
+        <a href="index.html">Blog</a> |
+        <a href="register.html">Form Pendaftaran</a> |
+        <a href="table.html">Tabel Perolehan Nilai</a> |
+        <a href="cv.html">Curriculum Vitae</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <!-- ======= Post 1 ======= -->
+      <article>
+        <figure>
+          <img src="images/Suasana Kampus.jpg" alt="Cover Post 1" width="900" />
+          <figcaption>Gambar: Suasana kampus</figcaption>
+        </figure>
+        <h2>
+          <a href="detail1.html">Cara Belajar Efektif di Tengah Kesibukan</a>
+        </h2>
+        <p>
+          Penulis: <strong>Zefanya Saragih</strong>
+          <img
+            src="images/Pas Foto Zefanya Ecklezia Saragih.jpg"
+            alt="Foto Zefanya"
+            width="30"
+            style="
+              vertical-align: middle;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+            "
+          />
+        </p>
+        <p>Tanggal: 2025-09-01</p>
+        <p>Label: <em>Belajar, Tips, Kampus</em></p>
+        <p>
+          Ringkasan: Artikel ini membahas langkah-langkah praktis agar waktu
+          belajar tetap produktif di tengah sibuknya kegiatan kampus.
+          <a href="detail1.html">Baca selengkapnya...</a>
+        </p>
+
+        <!-- Komentar -->
+        <section class="comment-section">
+          <h3>Kirim Komentar</h3>
+          <form action="#" method="post" enctype="multipart/form-data">
+            <label>Nama: <input type="text" name="nama" required /></label
+            ><br /><br />
+            <label
+              >Upload Foto (opsional):
+              <input type="file" name="foto" accept="image/*" /></label
+            ><br /><br />
+            <label
+              >Isi Komentar:<br />
+              <textarea
+                name="komentar"
+                rows="4"
+                cols="60"
+                placeholder="Tulis komentar di sini"
+                required
+              ></textarea></label
+            ><br /><br />
+            <input type="submit" value="Kirim" />
+            <input type="reset" value="Reset" />
+          </form>
+
+          <h3>Komentar</h3>
+
+          <div class="comment">
+            <img
+              src="images/Pas Foto Zefanya Ecklezia Saragih.jpg"
+              alt="Komentator 1"
+              width="30"
+            />
+            <div>
+              <strong>Zefanya</strong>
+              <p>
+                Terima kasih, sangat membantu! Saya akan coba tekniknya minggu
+                ini.
+              </p>
+            </div>
+          </div>
+
+          <div class="comment">
+            <img
+              src="images/Pas Foto Zefanya Ecklezia Saragih.jpg"
+              alt="Komentator 2"
+              width="30"
+            />
+            <div>
+              <strong>Zefanya</strong>
+              <p>
+                Penjelasan rapi dan jelas. Contoh jadwalnya juga bermanfaat.
+              </p>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <!-- ======= Post 2 ======= -->
+      <article>
+        <figure>
+          <img src="images/Portfolio.jpeg" alt="Cover Post 2" width="900" />
+          <figcaption>Gambar: Contoh portofolio sederhana</figcaption>
+        </figure>
+        <h2><a href="detail2.html">Membangun Portofolio untuk Pemula</a></h2>
+        <p>
+          Penulis: <strong>Zefanya Saragih</strong>
+          <img
+            src="images/Pas Foto Zefanya Ecklezia Saragih.jpg"
+            alt="Foto Zefanya"
+            width="30"
+            style="
+              vertical-align: middle;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+            "
+          />
+        </p>
+        <p>Tanggal: 2025-08-25</p>
+        <p>Label: <em>Karir, Portfolio, Desain</em></p>
+        <p>
+          Ringkasan: Panduan praktis membuat portofolio sederhana yang dapat
+          dipakai saat melamar kerja magang atau projek.
+          <a href="detail2.html">Baca selengkapnya...</a>
+        </p>
+
+        <!-- Komentar -->
+        <section class="comment-section">
+          <h3>Kirim Komentar</h3>
+          <form action="#" method="post" enctype="multipart/form-data">
+            <label>Nama: <input type="text" name="nama" required /></label
+            ><br /><br />
+            <label
+              >Upload Foto (opsional):
+              <input type="file" name="foto" accept="image/*" /></label
+            ><br /><br />
+            <label
+              >Isi Komentar:<br />
+              <textarea
+                name="komentar"
+                rows="4"
+                cols="60"
+                placeholder="Tulis komentar di sini"
+                required
+              ></textarea></label
+            ><br /><br />
+            <input type="submit" value="Kirim" />
+            <input type="reset" value="Reset" />
+          </form>
+
+          <h3>Komentar</h3>
+
+          <div class="comment">
+            <img
+              src="images/Pas Foto Zefanya Ecklezia Saragih.jpg"
+              alt="Komentator 3"
+              width="30"
+            />
+            <div>
+              <strong>Zefanya</strong>
+              <p>Bagus sekali! Ada template portofolio yang bisa diunduh?</p>
+            </div>
+          </div>
+
+          <div class="comment">
+            <img
+              src="images/Pas Foto Zefanya Ecklezia Saragih.jpg"
+              alt="Komentator 4"
+              width="30"
+            />
+            <div>
+              <strong>Zefanya</strong>
+              <p>Terima kasih, sangat membantu untuk pemula.</p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <hr />
+      <p>&copy; 2025 Praktikum PABWE — dibuat oleh Zefanya Ecklezia Saragih</p>
+    </footer>
+  </body>
+</html>

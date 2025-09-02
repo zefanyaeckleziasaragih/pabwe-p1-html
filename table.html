@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tabel Perolehan Nilai</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      :root {
+        --max-width: 950px;
+        --bg: #f4f6f8;
+        --card: #ffffff;
+        --muted: #666;
+        --border: #ddd;
+        --accent: #fafafa;
+        --accent-strong: #003399;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Times New Roman", Times, serif;
+        background: var(--bg);
+        color: #111;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      header,
+      main,
+      footer {
+        max-width: var(--max-width);
+        margin: 20px auto;
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+
+      header h1 {
+        font-size: 28px;
+        margin: 0 0 12px 0;
+        text-align: center;
+      }
+      nav {
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      nav a {
+        margin: 0 8px;
+        color: var(--accent-strong);
+        text-decoration: none;
+        font-weight: bold;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      hr {
+        border: none;
+        margin: 18px 0;
+        border-top: 1px solid #ccc;
+      }
+
+      /* table wrapper */
+      .table-wrap {
+        width: 100%;
+        overflow-x: auto;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px; /* diperbesar */
+      }
+
+      thead th {
+        background: linear-gradient(#eef6ff, #e9f1ff);
+        color: #0b3f8a;
+        text-align: center;
+        padding: 10px 6px; /* diperbesar */
+        border-bottom: 1px solid var(--border);
+        font-weight: bold;
+        font-size: 13px;
+      }
+
+      tbody td,
+      tfoot td {
+        padding: 10px 6px; /* diperbesar */
+        border-bottom: 1px solid #f2f2f2;
+        text-align: center;
+        font-size: 13px;
+      }
+
+      td.name,
+      td.prog {
+        text-align: left;
+        padding-left: 8px;
+      }
+
+      tbody tr:nth-child(even) {
+        background: #fbfcfc;
+      }
+
+      tfoot td {
+        background: #fbfffb;
+        font-weight: bold;
+        color: #1a6b2a;
+      }
+
+      footer {
+        text-align: center;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      @media (max-width: 800px) {
+        table {
+          font-size: 12px;
+        }
+        thead th,
+        tbody td,
+        tfoot td {
+          padding: 6px 4px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Tabel Perolehan Nilai</h1>
+      <nav>
+        <a href="index.html">Blog</a> |
+        <a href="register.html">Form Pendaftaran</a> |
+        <a href="table.html">Tabel Perolehan Nilai</a> |
+        <a href="cv.html">Curriculum Vitae</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <div class="table-wrap" role="region" aria-label="Tabel perolehan nilai">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>NIM</th>
+              <th>Nama</th>
+              <th>Program Studi</th>
+              <th>Kelas</th>
+              <th>K1-1</th>
+              <th>K1-2</th>
+              <th>Tot</th>
+              <th>Bobot</th>
+              <th>P2-1</th>
+              <th>P1-1</th>
+              <th>P3-1</th>
+              <th>Tot</th>
+              <th>Bobot</th>
+              <th>T1-1</th>
+              <th>T2-1</th>
+              <th>T3-1</th>
+              <th>Tot</th>
+              <th>Bobot</th>
+              <th>UAS1-1</th>
+              <th>UAS2-1</th>
+              <th>Tot</th>
+              <th>Bobot</th>
+              <th>UTS1-1</th>
+              <th>UTS2-1</th>
+              <th>UTS2-2</th>
+              <th>UTS2-3</th>
+              <th>Tot</th>
+              <th>Bobot</th>
+              <th>Total</th>
+              <th>Bobot (total)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>11S2400</td>
+              <td class="name">David L. Simbolon</td>
+              <td class="prog">Sarjana</td>
+              <td>11IF1</td>
+              <td>25</td>
+              <td>75</td>
+              <td>100</td>
+              <td>10</td>
+              <td>50</td>
+              <td>25</td>
+              <td>25</td>
+              <td>100</td>
+              <td>5</td>
+              <td>50</td>
+              <td>25</td>
+              <td>25</td>
+              <td>100</td>
+              <td>15</td>
+              <td>50</td>
+              <td>50</td>
+              <td>100</td>
+              <td>40</td>
+              <td>25</td>
+              <td>25</td>
+              <td>25</td>
+              <td>25</td>
+              <td>100</td>
+              <td>30</td>
+              <td>500</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>2</td> <td>11S2401</td> <td class="name">Edwin Christoffel</td> <td class="prog">Sarjana</td> <td>11IF1</td> <td>20</td> <td>60</td> <td>80</td> <td>10</td> <td>40</td> <td>20</td> <td>30</td> <td>90</td> <td>5</td> <td>30</td> <td>20</td> <td>25</td> <td>75</td> <td>15</td> <td>40</td> <td>30</td> <td>70</td> <td>40</td> <td>20</td> <td>15</td> <td>20</td> <td>25</td> <td>80</td> <td>30</td> <td>395</td> <td>100</td> </tr> <tr> <td>3</td> <td>11S2402</td> <td class="name">Aditya Putera</td> <td class="prog">Sarjana</td> <td>11IF1</td> <td>15</td> <td>40</td> <td>55</td> <td>10</td> <td>30</td> <td>25</td> <td>20</td> <td>75</td> <td>5</td> <td>40</td> <td>30</td> <td>20</td> <td>90</td> <td>15</td> <td>45</td> <td>35</td> <td>80</td> <td>40</td> <td>18</td> <td>20</td> <td>22</td> <td>20</td> <td>80</td> <td>30</td> <td>380</td> <td>100</td> </tr> <tr> <td>4</td> <td>11S2403</td> <td class="name">Gian Danovan</td> <td class="prog">Sarjana</td> <td>11IF1</td> <td>10</td> <td>30</td> <td>40</td> <td>10</td> <td>20</td> <td>15</td> <td>10</td> <td>45</td> <td>5</td> <td>20</td> <td>20</td> <td>25</td> <td>65</td> <td>15</td> <td>30</td> <td>25</td> <td>55</td> <td>40</td> <td>10</td> <td>15</td> <td>12</td> <td>13</td> <td>50</td> <td>30</td> <td>255</td> <td>100</td> </tr> <tr> <td>5</td> <td>11S2404</td> <td class="name">Rouli Claudia</td> <td class="prog">Sarjana</td> <td>11IF1</td> <td>25</td> <td>70</td> <td>95</td> <td>10</td> <td>40</td> <td>30</td> <td>30</td> <td>100</td> <td>5</td> <td>40</td> <td>30</td> <td>30</td> <td>100</td> <td>15</td> <td>48</td> <td>50</td> <td>98</td> <td>40</td> <td>24</td> <td>25</td> <td>25</td> <td>24</td> <td>98</td> <td>30</td> <td>491</td> <td>100</td> </tr> <tr> <td>6</td> <td>11S2405</td> <td class="name">Martha Nababan</td> <td class="prog">Sarjana</td> <td>11IF1</td> <td>18</td> <td>55</td> <td>73</td> <td>10</td> <td>35</td> <td>30</td> <td>30</td> <td>95</td> <td>5</td> <td>40</td> <td>20</td> <td>30</td> <td>90</td> <td>15</td> <td>35</td> <td>30</td> <td>65</td> <td>40</td> <td>20</td> <td>20</td> <td>20</td> <td>20</td> <td>80</td> <td>30</td> <td>403</td> <td>100</td> </tr> <tr> <td>7</td> <td>11S2406</td> <td class="name">Miftahul J. Siregar</td> <td class="prog">Sarjana</td> <td>11IF1</td> <td>22</td> <td>60</td> <td>82</td> <td>10</td> <td>40</td> <td>20</td> <td>30</td> <td>90</td> <td>5</td> <td>45</td> <td>25</td> <td>30</td> <td>100</td> <td>15</td> <td>44</td> <td>40</td> <td>84</td> <td>40</td> <td>24</td> <td>24</td> <td>25</td> <td>24</td> <td>98</td> <td>30</td> <td>454</td> <td>100</td> </tr> <tr> <td>8</td> <td>11S2407</td> <td class="name">Dea M. Siregar</td> <td class="prog">Sarjana</td> <td>11IF1</td> <td>12</td> <td>50</td> <td>62</td> <td>10</td> <td>30</td> <td>20</td> <td>25</td> <td>75</td> <td>5</td> <td>28</td> <td>20</td> <td>22</td> <td>70</td> <td>15</td> <td>30</td> <td>30</td> <td>60</td> <td>40</td> <td>15</td> <td>18</td> <td>20</td> <td>17</td> <td>70</td> <td>30</td> <td>337</td> <td>100</td> </tr> <tr> <td>9</td> <td>11S2408</td> <td class="name">Sandrina T. Sihite</td> <td class="prog">Sarjana</td> <td>11IF1</td> <td>20</td> <td>55</td> <td>75</td> <td>10</td> <td>35</td> <td>25</td> <td>30</td> <td>90</td> <td>5</td> <td>30</td> <td>30</td> <td>30</td> <td>90</td> <td>15</td> <td>40</td> <td>45</td> <td>85</td> <td>40</td> <td>22</td> <td>23</td> <td>24</td> <td>21</td> <td>90</td> <td>30</td> <td>430</td> <td>100</td> </tr> <tr> <td>10</td> <td>11S2409</td> <td class="name">Dimas R. Samuel</td> <td class="prog">Sarjana</td> <td>11IF1</td> <td>24</td> <td>70</td> <td>94</td> <td>10</td> <td>40</td> <td>30</td> <td>25</td> <td>95</td> <td>5</td> <td>40</td> <td>30</td> <td>30</td> <td>100</td> <td>15</td> <td>50</td> <td>50</td> <td>100</td> <td>40</td> <td>25</td> <td>25</td> <td>25</td> <td>25</td> <td>100</td> <td>30</td> <td>489</td> <td>100</td> </tr> </tbody> <tfoot> <tr> <td colspan="5" class="right">Rata-Rata</td> <td>19.1</td> <td>56.5</td> <td>75.6</td> <td>10</td> <td>36.0</td> <td>24.0</td> <td>25.5</td> <td>85.5</td> <td>5</td> <td>36.3</td> <td>25.0</td> <td>26.2</td> <td>88.0</td> <td>15</td> <td>41.2</td> <td>38.5</td> <td>79.7</td> <td>40</td> <td>20.3</td> <td>21.0</td> <td>21.8</td> <td>21.4</td> <td>84.6</td> <td>30</td> <td>413.4</td> <td>100</td> </tr> </tfoot> </table> </div> </main> <div class="spacer" aria-hidden="true"></div>
+          </tfoot>
+        </table>
+      </div>
+    </main>
+
+    <footer>
+      <hr />
+      <p>&copy; 2025 Praktikum PABWE — dibuat oleh Zefanya Ecklezia Saragih</p>
+    </footer>
+  </body>
+</html>

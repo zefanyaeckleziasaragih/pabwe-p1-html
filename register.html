@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Form Pendaftaran</title>
+    <style>
+      /* ===== Global (mirip CV) ===== */
+      :root {
+        --max-width: 950px; /* disamakan dengan index.html */
+        --bg: #f4f6f8;
+        --card: #ffffff;
+        --muted: #666;
+        --border: #e0e0e0;
+        --accent: #fafafa;
+        --accent-strong: #003399;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Times New Roman", Times, serif;
+        background: var(--bg);
+        color: #111;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* page container: samakan style header/main/footer dengan index.html */
+      header,
+      main,
+      footer {
+        max-width: var(--max-width);
+        margin: 20px auto; /* sama seperti index.html */
+        padding: 20px; /* sama seperti index.html */
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+
+      header h1 {
+        font-size: 28px;
+        margin: 0 0 12px 0;
+        text-align: center;
+      }
+      nav {
+        text-align: center;
+        margin-bottom: 16px; /* diperbesar sesuai index.html */
+      }
+      nav a {
+        margin: 0 8px;
+        color: #003399; /* samakan dengan index.html */
+        text-decoration: none;
+        font-weight: bold; /* samakan */
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      hr {
+        border: none;
+        margin: 18px 0; /* samakan */
+        border-top: 1px solid #ccc; /* samakan */
+      }
+
+      /* form box (tetap ada) */
+      form fieldset {
+        border: 1px solid var(--border);
+        padding: 16px;
+        border-radius: 8px;
+        background: var(--accent);
+      }
+      form legend {
+        font-weight: bold;
+        padding: 0 8px;
+      }
+
+      /* labels & inputs */
+      label {
+        display: block;
+        font-size: 15px;
+        margin-bottom: 6px;
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="date"],
+      input[type="email"],
+      select,
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 15px;
+        margin-top: 6px;
+      }
+      textarea {
+        min-height: 110px;
+        resize: vertical;
+      }
+
+      /* radio/checkbox groups */
+      fieldset.inner {
+        border: 1px dashed #e6e6e6;
+        padding: 10px;
+        border-radius: 6px;
+        margin-bottom: 12px;
+        background: #fff;
+      }
+      .options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+      }
+      .options label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin: 0;
+        font-size: 15px;
+      }
+
+      /* action buttons */
+      .actions {
+        margin-top: 14px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      button,
+      input[type="submit"],
+      input[type="reset"] {
+        padding: 8px 14px;
+        border-radius: 6px;
+        border: 1px solid #cfcfcf;
+        cursor: pointer;
+        font-size: 15px;
+        background: #fff;
+      }
+      .btn-primary {
+        background: var(--accent-strong);
+        color: #fff;
+        border-color: #064a9a;
+      }
+      .btn-secondary {
+        background: #f3f3f3;
+      }
+
+      /* small text and footnote */
+      .small {
+        font-size: 13px;
+        color: var(--muted);
+        margin-top: 8px;
+      }
+      footer {
+        text-align: center;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      /* responsive */
+      @media (max-width: 640px) {
+        header,
+        main,
+        footer {
+          margin: 12px;
+          padding: 12px;
+        }
+        nav a {
+          display: inline-block;
+          margin: 6px 6px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Form Pendaftaran</h1>
+      <nav>
+        <a href="index.html">Blog</a> |
+        <a href="register.html">Form Pendaftaran</a> |
+        <a href="table.html">Tabel Perolehan Nilai</a> |
+        <a href="cv.html">Curriculum Vitae</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <form
+        id="registrationForm"
+        action="#"
+        method="post"
+        autocomplete="on"
+        novalidate
+      >
+        <fieldset>
+          <legend>Data Pribadi</legend>
+
+          <label for="nama_lengkap"
+            >Nama Lengkap:
+            <input
+              type="text"
+              id="nama_lengkap"
+              name="nama_lengkap"
+              placeholder="Nama lengkap"
+              required
+            />
+          </label>
+
+          <div style="height: 8px"></div>
+
+          <fieldset class="inner" aria-label="Jenis Kelamin">
+            <legend>Jenis Kelamin (pilih salah satu)</legend>
+            <div class="options">
+              <label for="jk_l">
+                <input
+                  type="radio"
+                  id="jk_l"
+                  name="jenis_kelamin"
+                  value="Laki-laki"
+                  required
+                />
+                Laki-laki
+              </label>
+              <label for="jk_p">
+                <input
+                  type="radio"
+                  id="jk_p"
+                  name="jenis_kelamin"
+                  value="Perempuan"
+                />
+                Perempuan
+              </label>
+            </div>
+          </fieldset>
+
+          <label for="tempat_lahir"
+            >Tempat Lahir:
+            <input
+              type="text"
+              id="tempat_lahir"
+              name="tempat_lahir"
+              placeholder="Kota, mis. Medan"
+              required
+            />
+          </label>
+
+          <label for="tanggal_lahir"
+            >Tanggal Lahir:
+            <input
+              type="date"
+              id="tanggal_lahir"
+              name="tanggal_lahir"
+              required
+            />
+          </label>
+
+          <fieldset class="inner" aria-label="Hobi">
+            <legend>Hobi (boleh pilih lebih dari satu)</legend>
+            <div class="options" role="group" aria-label="Pilih hobi">
+              <label
+                ><input type="checkbox" name="hobi[]" value="Membaca" />
+                Membaca</label
+              >
+              <label
+                ><input type="checkbox" name="hobi[]" value="Olahraga" />
+                Olahraga</label
+              >
+              <label
+                ><input type="checkbox" name="hobi[]" value="Coding" />
+                Coding</label
+              >
+              <label
+                ><input type="checkbox" name="hobi[]" value="Musik" />
+                Musik</label
+              >
+              <label
+                ><input type="checkbox" name="hobi[]" value="Melukis" />
+                Melukis</label
+              >
+            </div>
+          </fieldset>
+
+          <label for="password"
+            >Password:
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Masukkan password (min 6 karakter)"
+              minlength="6"
+              required
+            />
+          </label>
+
+          <label style="margin-top: 10px">
+            <input type="checkbox" id="setuju" name="setuju" required />
+            Saya menyetujui syarat dan ketentuan.
+          </label>
+
+          <div class="actions">
+            <button type="reset" class="btn-secondary">Reset</button>
+            <button type="submit" class="btn-primary">Submit</button>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+
+    <footer>
+      <hr />
+      <p>&copy; 2025 Praktikum PABWE — dibuat oleh Zefanya Ecklezia Saragih</p>
+    </footer>
+  </body>
+</html>

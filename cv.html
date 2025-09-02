@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <title>Curriculum Vitae</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      /* ====== Global style (sama seperti index.html) ====== */
+      body {
+        font-family: "Times New Roman", Times, serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f6f8;
+        color: #111;
+      }
+
+      header,
+      main,
+      footer {
+        max-width: 950px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Header & Nav (sama dengan index) */
+      header h1 {
+        font-size: 28px;
+        margin: 0 0 12px 0;
+        text-align: center;
+      }
+      nav {
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      nav a {
+        margin: 0 8px;
+        color: #003399;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      hr {
+        margin: 18px 0;
+        border: none;
+        border-top: 1px solid #ccc;
+      }
+
+      /* ====== CV specific ====== */
+      .top {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        margin-bottom: 14px;
+      }
+      .photo {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .meta {
+        flex: 1;
+      }
+      .meta p {
+        margin: 4px 0;
+      }
+      section {
+        margin-top: 18px;
+      }
+      section h2 {
+        font-size: 18px;
+        margin-bottom: 6px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 6px;
+      }
+      ul {
+        margin: 6px 0 0 20px;
+      }
+      .small {
+        font-size: 13px;
+        color: #444;
+      }
+      .contact {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 4px;
+      }
+      .chip {
+        background: #f9f9f9;
+        padding: 6px 10px;
+        border-radius: 12px;
+        border: 1px solid #e0e0e0;
+        font-size: 13px;
+      }
+
+      /* Footer (sama dengan index) */
+      footer {
+        margin-top: 30px;
+        font-size: 13px;
+        color: #666;
+        text-align: center;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 600px) {
+        .top {
+          flex-direction: column;
+          align-items: center;
+        }
+        .meta {
+          text-align: center;
+        }
+        nav a {
+          display: inline-block;
+          margin: 6px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Curriculum Vitae</h1>
+      <nav>
+        <a href="index.html">Blog</a> |
+        <a href="register.html">Form Pendaftaran</a> |
+        <a href="table.html">Tabel Perolehan Nilai</a> |
+        <a href="cv.html">Curriculum Vitae</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <div class="top">
+        <img
+          src="images/Pas Foto Zefanya Ecklezia Saragih.jpg"
+          alt="Foto Zefanya"
+          class="photo"
+        />
+
+        <div class="meta">
+          <h2>Zefanya Ecklezia Saragih</h2>
+          <p class="small">Mahasiswa / Frontend Developer / Desainer UI/UX</p>
+
+          <div class="contact">
+            <div class="chip">
+              Email: <strong>zefanyaecklesia.s@gmail.com</strong>
+            </div>
+            <div class="chip">
+              WhatsApp: <strong>+62 882-0157-73338</strong>
+            </div>
+          </div>
+
+          <p class="small" style="margin-top: 8px">
+            Tentang: Mahasiswa Program Studi Sarjana Informatika yang tertarik
+            pada pengembangan web, UI/UX, dan project open-source. Teliti, bisa
+            bekerja tim, dan berpengalaman magang frontend.
+          </p>
+        </div>
+      </div>
+
+      <section id="pendidikan">
+        <h2>Riwayat Pendidikan</h2>
+        <ul>
+          <li>
+            <strong>2023 — Sekarang</strong> — Institut Teknologi Del, S1
+            Informatika
+          </li>
+          <li>
+            <strong>2020 — 2023</strong> — SMA Swasta Methodist-2 Medan, IPA
+          </li>
+        </ul>
+      </section>
+
+      <section id="pengalaman">
+        <h2>Pengalaman</h2>
+        <ul>
+          <li>
+            <strong
+              >Juara 1 — Lomba Karya Tulis (LKTI) HUT Ke-80 Kemerdekaan
+              RI</strong
+            >
+            — Wilayah I Sumatera Utara (2025).
+            <p>
+              Meraih juara pertama dalam Lomba Karya Tulis Ilmiah Kategori
+              Mahasiswa tingkat nasional pada HUT ke-80 RI (LKTI) yang
+              mengangkat judul: "Kontribusi Perguruan Tinggi Swasta dalam
+              Pembangunan Daerah Tertinggal: Studi Kasus Institut Teknologi
+              Del".
+            </p>
+          </li>
+
+          <li>
+            <strong
+              >Asisten Matrikulasi (Calon Mahasiswa Baru Angkatan 2024)</strong
+            >
+            — Institut Teknologi Del (2024).
+            <p>
+              Bertugas sebagai asisten program matrikulasi untuk calon mahasiswa
+              baru angkatan 2024; membantu pelaksanaan rangkaian pembekalan dan
+              orientasi akademik serta pendampingan teknis platform
+              pembelajaran.
+            </p>
+          </li>
+
+          <li>
+            <strong>Asisten Dosen — Mata Kuliah Pemrograman Fungsional</strong>
+            — Program Studi Informatika (2024).
+            <p>
+              Mendampingi dosen dalam persiapan materi perkuliahan dan
+              praktikum, memimpin sesi praktikum dan tutorial, membantu
+              mahasiswa memahami konsep fungsi murni, rekursi, dan pemrograman
+              deklaratif, serta menilai tugas dan memberikan umpan balik teknis
+              untuk peningkatan pemahaman.
+            </p>
+          </li>
+
+          <li>
+            <strong>Asisten Dosen — Mata Kuliah Pemrograman Prosedural</strong>
+            — Program Studi Informatika (2024).
+            <p>
+              Membantu pelaksanaan praktikum dan latihan pemrograman prosedural,
+              memberikan bimbingan debugging, menyusun contoh soal dan solusi,
+              serta mengadakan sesi konsultasi untuk memperkuat logika
+              pemrograman dan struktur kontrol bagi mahasiswa.
+            </p>
+          </li>
+
+          <li>
+            <strong>Asisten Laboratorium — Mata Kuliah Fisika Dasar I</strong> —
+            Program Studi Manajemen Rekayasa (2024).
+            <p>
+              Bertugas menyiapkan alat dan bahan eksperimen, mengawasi jalannya
+              praktikum, memastikan protokol keselamatan labouratorium dipatuhi,
+              membantu pengukuran dan pencatatan data, serta membimbing
+              mahasiswa dalam penyusunan laporan praktikum dan interpretasi
+              hasil.
+            </p>
+          </li>
+            </ol>
+          </li>
+        </ul>
+      </section>
+
+      <section id="keahlian">
+        <h2>Keahlian</h2>
+        <ul>
+          <li>HTML, CSS dasar & JavaScript</li>
+          <li>Desain UI/UX (Figma dasar)</li>
+          <li>Bahasa pemrograman: Java, C, Python</li>
+        </ul>
+      </section>
+
+      <section id="sertifikat">
+        <h2>Sertifikat</h2>
+        <ul>
+          <li>
+            <a
+              href="images/Sertifikat%20(50).pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Sertifikat Juara 1 — Lomba Karya Tulis (LKTI) HUT Ke-80
+              Kemerdekaan RI — Wilayah I Sumatera Utara
+            </a>
+            — <span class="small">2025</span>
+          </li>
+        </ul>
+      </section>
+
+<section id="portfolio">
+  <h2>Portfolio</h2>
+  <ul>
+    <li>
+      <strong>Blog Praktikum — Proyek Pengembangan Aplikasi Berbasis Web</strong>
+      <p>
+        Blog yang saya kembangkan untuk praktikum mata kuliah Pengembangan Aplikasi Berbasis Web. Proyek ini berisi halaman blog (index, detail artikel), halaman CV, form pendaftaran, dan komponen UI sederhana yang dibuat dengan HTML — dibuat sebagai tugas praktikum dan contoh portofolio.
+      </p>
+      <p>
+        GitHub:
+        <a href="https://github.com/zefanyaeckleziasaragih/pabwe-p1-html" target="_blank" rel="noopener noreferrer">
+          github.com/zefanyaeckleziasaragih/pabwe-p1-html
+        </a>
+      </p>
+    </li>
+
+    <li>
+      <strong>Aplikasi "BelanjaRia" — Proyek Algoritma &amp; Struktur Data</strong>
+      <p>
+        Sebagai pengembang pada proyek untuk mata kuliah Algoritma &amp; Struktur Data, saya mengimplementasikan aplikasi pemrosesan laporan penjualan cabang untuk perusahaan retail "BelanjaRia" yang melakukan pengurutan data dengan Bubble Sort, menyusun data ke Binary Search Tree (BST) secara rekursif, dan menghasilkan analisis seperti total cabang, total &amp; rata-rata penjualan, cabang tertinggi/terendah, serta daftar cabang dari tertinggi ke terendah menggunakan reverse inorder traversal; proyek ditulis dengan Java dan dibangun menggunakan Maven.
+      </p>
+      <p>
+        GitHub:
+        <a href="https://github.com/zefanyaeckleziasaragih/alstrudat-c05-ifs23050" target="_blank" rel="noopener noreferrer">
+          github.com/zefanyaeckleziasaragih/alstrudat-c05-ifs23050
+        </a>
+      </p>
+    </li>
+  </ul>
+</section>
+
+
+      <section id="lainnya">
+        <h2>Lainnya</h2>
+        <ul>
+          <li><strong
+              >Bahasa:</strong
+            >
+            Indonesia (aktif), Inggris (menengah)</li>
+                    <li>
+            <strong
+              >Anggota Badan Eksekutif Mahasiswa — Departemen Pusat dalam
+              Kampus, Divisi Data & Informasi</strong
+            >
+            — (2024 — Sekarang).
+            <p>
+              Berperan dalam pengelolaan data organisasi dan komunikasi
+              informasi internal/eksternal kampus. Tanggung jawab meliputi:
+            </p>
+            <ol>
+              <li>Mengelola basis data dan dokumentasi kegiatan organisasi.</li>
+              <li>
+                Menyusun dan mendistribusikan pengumuman, newsletter, dan
+                laporan kegiatan.
+              </li>
+              <li>
+                Membuat dashboard sederhana untuk pemantauan program dan survei
+                anggota.
+              </li>
+              <li>
+                Koordinasi dengan divisi lain untuk kebutuhan informasi dan
+                publikasi acara.
+              </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <hr />
+      <p>&copy; 2025 Praktikum PABWE — dibuat oleh Zefanya Ecklezia Saragih</p>
+    </footer>
+  </body>
+</html>

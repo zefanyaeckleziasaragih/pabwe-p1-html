@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <title>Detail — Membangun Portofolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      :root {
+        --max-width: 900px;
+        --muted: #666;
+        --border: #e0e0e0;
+        --accent: #f6f9fb;
+        --card: #ffffff;
+        --shadow: rgba(0, 0, 0, 0.04);
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        font-family: "Times New Roman", Times, serif;
+        margin: 0;
+        color: #111;
+        background: #fafafa;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      header,
+      main,
+      footer {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      header nav {
+        margin-top: 18px;
+      }
+      header a {
+        color: #0b66c3;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 12px 0 18px 0;
+      }
+
+      main {
+        padding-bottom: 28px;
+      }
+
+      article {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        box-shadow: 0 2px 6px var(--shadow);
+        padding: 18px;
+      }
+
+      article h2 {
+        margin: 0 0 8px 0;
+        font-size: 22px;
+      }
+
+      .meta {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin: 10px 0 14px 0;
+      }
+
+      .author-photo {
+        width: 56px;
+        height: 56px;
+        object-fit: cover;
+        border-radius: 6px;
+        border: 1px solid var(--border);
+      }
+
+      .meta .by {
+        font-size: 15px;
+        margin: 0;
+      }
+      .meta .date,
+      .meta .labels {
+        margin: 4px 0 0 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      figure {
+        margin: 14px 0;
+        border-radius: 6px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+      }
+      figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      figcaption {
+        font-size: 13px;
+        color: var(--muted);
+        padding: 8px 10px;
+        background: var(--accent);
+      }
+
+      section h3 {
+        margin: 16px 0 8px 0;
+        font-size: 18px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 6px;
+      }
+
+      /* Artikel isi */
+      section p {
+        line-height: 1.6;
+        text-align: justify;
+        margin: 0 0 10px 0;
+        font-size: 15px;
+      }
+
+      /* Form komentar */
+      form {
+        background: #fff;
+        border: 1px solid var(--border);
+        padding: 12px;
+        border-radius: 6px;
+      }
+      label {
+        font-size: 14px;
+        color: #111;
+        display: block;
+      }
+      input[type="text"],
+      input[type="file"],
+      input[type="date"],
+      input[type="email"],
+      input[type="password"],
+      textarea {
+        margin-top: 6px;
+        padding: 8px 10px;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 14px;
+        border: 1px solid #d6d6d6;
+        border-radius: 4px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      textarea {
+        min-height: 110px;
+        resize: vertical;
+      }
+
+      .form-actions {
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+      }
+      .btn {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 6px;
+        border: 1px solid #cfcfcf;
+        background: #f3f3f3;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .btn-primary {
+        background: #0b66c3;
+        color: #fff;
+        border-color: #095aa0;
+      }
+
+      /* Daftar komentar */
+      .comments-list {
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .comment {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        background: #fff;
+        border: 1px solid var(--border);
+        padding: 10px;
+        border-radius: 6px;
+      }
+      .comment img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 6px;
+        border: 1px solid var(--border);
+      }
+      .comment .who {
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+      .comment .text {
+        color: #222;
+        line-height: 1.5;
+        font-size: 14px;
+      }
+
+      footer {
+        max-width: var(--max-width);
+        margin: 18px auto 40px auto;
+        padding-left: 16px;
+        padding-right: 16px;
+        text-align: left;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      @media (max-width: 640px) {
+        .meta {
+          flex-direction: row;
+          gap: 8px;
+          align-items: center;
+        }
+        article {
+          padding: 12px;
+        }
+        .author-photo {
+          width: 44px;
+          height: 44px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">← Kembali ke Blog</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <article>
+        <h2>Membangun Portofolio untuk Pemula</h2>
+
+        <div class="meta">
+          <img
+            src="images/Pas Foto Zefanya Ecklezia Saragih.jpg"
+            alt="Foto Zefanya"
+            class="author-photo"
+          />
+          <div>
+            <p class="by">Penulis: <strong>Zefanya Saragih</strong></p>
+            <p class="date">Tanggal: 2025-08-25</p>
+            <p class="labels">Label: <em>Karir, Portfolio, Desain</em></p>
+          </div>
+        </div>
+
+        <figure>
+          <img src="images/Portfolio.jpeg" alt="Portfolio Cover" />
+          <figcaption>Cover: Contoh layout portofolio sederhana</figcaption>
+        </figure>
+
+        <section>
+          <h3>Deskripsi Artikel</h3>
+          <p>
+            Portofolio adalah alat utama untuk menunjukkan kemampuanmu ketika
+            melamar magang atau kerja. Artikel ini memandu pembuatan portofolio
+            mulai dari pemilihan proyek, penulisan deskripsi proyek, hingga
+            penyajian visual yang rapi dan singkat. Mulailah dengan 3 proyek
+            terbaik — jelaskan peranmu, tantangan, solusi, dan hasil (mis. link,
+            screenshot, atau angka pencapaian). Gunakan bahasa sederhana dan
+            sertakan tangkapan layar utama sebagai cover tiap proyek. Jika belum
+            punya proyek nyata, buatlah studi kasus kecil (mis. redesign halaman
+            depan lokal usaha fiktif) yang menunjukkan proses berpikirmu dari
+            riset sampai solusi. Hindari menulis terlalu panjang; perekrut
+            biasanya menilai ringkasan yang jelas. Tambahkan kontak di bagian
+            atas, lalu link ke GitHub atau dokumen PDF. Selalu update portofolio
+            setiap selesai proyek baru.
+          </p>
+        </section>
+
+        <section>
+          <h3>Kirim Komentar</h3>
+          <form
+            action="#"
+            method="post"
+            enctype="multipart/form-data"
+            novalidate
+          >
+            <label for="nama"
+              >Nama:
+              <input type="text" id="nama" name="nama" required />
+            </label>
+
+            <label for="foto"
+              >Upload Foto (opsional):
+              <input type="file" id="foto" name="foto" accept="image/*" />
+            </label>
+
+            <label for="komentar"
+              >Isi Komentar:
+              <textarea
+                id="komentar"
+                name="komentar"
+                placeholder="Tulis komentar di sini"
+                required
+              ></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button type="reset" class="btn">Reset</button>
+              <button type="submit" class="btn btn-primary">Kirim</button>
+            </div>
+          </form>
+        </section>
+
+        <section>
+          <h3>Komentar</h3>
+
+          <div class="comments-list">
+            <div class="comment">
+              <img
+                src="images/Pas Foto Zefanya Ecklezia Saragih.jpg"
+                alt="Zefanya"
+              />
+              <div>
+                <div class="who">Zefanya</div>
+                <div class="text">
+                  Bagus sekali! Ada template portofolio yang bisa diunduh?
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <img
+                src="images/Pas Foto Zefanya Ecklezia Saragih.jpg"
+                alt="Zefanya"
+              />
+              <div>
+                <div class="who">Zefanya</div>
+                <div class="text">
+                  Terima kasih, sangat membantu untuk pemula.
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <img
+                src="images/Pas Foto Zefanya Ecklezia Saragih.jpg"
+                alt="Zefanya"
+              />
+              <div>
+                <div class="who">Zefanya</div>
+                <div class="text">
+                  Saya pakai format ini: Judul Proyek — Peran — Tools —
+                  Tantangan — Solusi — Hasil. Singkat dan jelas.
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <img
+                src="images/Pas Foto Zefanya Ecklezia Saragih.jpg"
+                alt="Zefanya (Author)"
+              />
+              <div>
+                <div class="who">Zefanya (Author)</div>
+                <div class="text">
+                  Template singkat yang Deni tulis bagus — kalau mau, saya bisa
+                  upload contoh portofolio sederhana minggu depan.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <p><a href="index.html">← Kembali ke Blog</a></p>
+    </footer>
+  </body>
+</html>
